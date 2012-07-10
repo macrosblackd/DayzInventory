@@ -1,0 +1,6 @@
+An ITEM can be CREATED with a NAME and a TYPE
+An ITEM can be ADDED to a TENT with QUANTITY by a PLAYER
+An ITEM can be REMOVED from a TENT with QUANTITY by a PLAYER
+
+A TENT can be PLACED in a LOCATION by a PLAYER
+A TENT can be REMOVED 
