@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DayzInventory.Infrastructure.Aggregates;
-using DayzInventory.Infrastructure.Model.Item;
+using DayzInventory.Infrastructure.Model;
 
 namespace DayzInventory.Infrastructure.Factories
 {
@@ -13,11 +13,11 @@ namespace DayzInventory.Infrastructure.Factories
          var events = LoadEventsFromEventStore(id);
          var observer = GetObserver();
 
-         var itemId = id as ItemId;
-         if(itemId != null)
+         var tentId = id as TentId;
+         if(tentId != null)
          {
-            var state = new ItemAggregateState(events);
-            var agg = new ItemAggregate(state, observer);
+            var state = new TentAggregateState(events);
+            var agg = new TentAggregate(state, observer);
             agg.Execute(command);
             return;
          }

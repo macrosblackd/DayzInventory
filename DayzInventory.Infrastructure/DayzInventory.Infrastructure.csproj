@@ -43,29 +43,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aggregates\ItemAggregate.cs" />
-    <Compile Include="CommandActions\CreateNewItemCommandAction.cs" />
-    <Compile Include="Events\NewItemCreated.cs" />
+    <Compile Include="Aggregates\TentAggregate.cs" />
+    <Compile Include="CommandActions\PlaceNewTentCommandAction.cs" />
+    <Compile Include="Commands\PlaceNewTent.cs" />
+    <Compile Include="EventSerializer.cs" />
+    <Compile Include="EventStreamer.cs" />
+    <Compile Include="Events\NewTentPlaced.cs" />
     <Compile Include="Extensions\ExtendsGuid.cs" />
-    <Compile Include="Commands\CreateNewItem.cs" />
     <Compile Include="Extensions\ExtendsIAtomicWriter.cs" />
     <Compile Include="Factories\AggregateFactory.cs" />
+    <Compile Include="Helpers\ExtendsType.cs" />
     <Compile Include="Helpers\RedirectToWhen.cs" />
     <Compile Include="IAggregateFactory.cs" />
     <Compile Include="IAtomicWriter.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ICommandAction.cs" />
     <Compile Include="ICqrsMessage.cs" />
+    <Compile Include="IEventStreamer.cs" />
     <Compile Include="IEvent.cs" />
     <Compile Include="IIdentity.cs" />
-    <Compile Include="Model\Item\ItemId.cs" />
-    <Compile Include="Model\Item\ItemType.cs" />
+    <Compile Include="MessagesProvider.cs" />
+    <Compile Include="Model\TentId.cs" />
     <Compile Include="Persistance\FileTapeStream.cs" />
-    <Compile Include="Projections\ItemDetailsProjection.cs" />
+    <Compile Include="Projections\TentDetailsProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queries\GetItemDetailsQuery.cs" />
-    <Compile Include="Responses\GetItemDetailsResponse.cs" />
-    <Compile Include="Views\ItemDetailsView.cs" />
+    <Compile Include="Queries\GetTentDetailsQuery.cs" />
+    <Compile Include="Responses\GetTentDetailsResponse.cs" />
+    <Compile Include="Views\TentDetailView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
